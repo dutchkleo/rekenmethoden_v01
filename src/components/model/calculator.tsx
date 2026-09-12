@@ -1,10 +1,13 @@
 import {
+  BookOpen,
   Download,
   RotateCcw,
+  X,
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { HousingSheet } from "@/components/model/housing-sheet";
 import { IncomeSheet } from "@/components/model/income-sheet";
+import { GuidePanel } from "@/components/model/guide-panel";
 import { NumberField, TextField } from "@/components/model/fields";
 import {
   AlertDialog,
@@ -57,11 +60,27 @@ const NAV = [
   { href: "#basisinkomen", label: "Basisinkomen" },
   { href: "#financiering", label: "Financiering" },
   { href: "#methode", label: "Methode" },
+  { href: "#toelichting", label: "Toelichting" },
 ];
 
 export function Calculator() {
   const hydrated = useHydrated();
   const [resetOpen, setResetOpen] = useState(false);
+  const [guideOpen, setGuideOpen] = useState(false);
+
+  useEffect(() => {
+    if (!guideOpen) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setGuideOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previous;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [guideOpen]);
   const totals = useLiveTotals();
   const area = useModelStore((state) => state.area);
   const asOf = useModelStore((state) => state.asOf);
@@ -92,7 +111,7 @@ export function Calculator() {
   return (
     <div className="min-h-dvh">
       <header className="sticky top-0 z-40 border-b border-border bg-bg/90 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6">
+        <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center gap-3 px-4 py-3 sm:px-6">
           <a href="#overzicht" className="font-display text-lg font-medium tracking-tight text-fg">
             Rekenmethode 0.1
           </a>
@@ -101,12 +120,29 @@ export function Calculator() {
               <a
                 key={item.href}
                 href={item.href}
+                onClick={(event) => {
+                  if (item.href !== "#toelichting") return;
+                  if (typeof window !== "undefined" && window.matchMedia("(max-width: 1279px)").matches) {
+                    event.preventDefault();
+                    setGuideOpen(true);
+                  }
+                }}
                 className="rounded-md px-3 py-2 text-muted transition-colors duration-150 hover:bg-surface hover:text-fg"
               >
                 {item.label}
               </a>
             ))}
           </nav>
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            className="h-10 xl:hidden"
+            onClick={() => setGuideOpen(true)}
+          >
+            <BookOpen className="size-3.5" />
+            Toelichting
+          </Button>
           <Button type="button" variant="ghost" size="sm" className="h-10" onClick={() => setResetOpen(true)}>
             <RotateCcw className="size-3.5" />
             Voorbeeld
@@ -114,7 +150,8 @@ export function Calculator() {
         </div>
       </header>
 
-      <main className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 sm:px-6 sm:py-10">
+      <div className="mx-auto grid max-w-screen-2xl xl:grid-cols-[minmax(0,1fr)_26rem]">
+      <main className="flex min-w-0 flex-col gap-6 px-4 py-8 sm:px-6 sm:py-10">
         <section id="overzicht" className="scroll-mt-24 grid gap-6 lg:grid-cols-[1.4fr_0.8fr]">
           <div>
             <p className="text-xs font-medium tracking-wide text-subtle uppercase">Versie 0.1 · 11 september 2026</p>
@@ -424,6 +461,47 @@ export function Calculator() {
           </p>
         </footer>
       </main>
+
+      <aside
+        id="toelichting"
+        className="hidden border-l border-border bg-surface xl:block"
+        aria-label="Toelichting bij de rekenmethode"
+      >
+        <div className="sticky top-14 h-[calc(100dvh-3.5rem)] overflow-y-auto overscroll-contain">
+          <GuidePanel idPrefix="gids" />
+        </div>
+      </aside>
+      </div>
+
+      {guideOpen ? (
+        <div className="fixed inset-0 z-50 xl:hidden">
+          <button
+            type="button"
+            className="absolute inset-0 bg-overlay"
+            aria-label="Toelichting sluiten"
+            onClick={() => setGuideOpen(false)}
+          />
+          <aside
+            className="absolute inset-y-0 right-0 flex w-full max-w-md flex-col bg-surface shadow-lift"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="guide-drawer-title"
+          >
+            <div className="flex items-center justify-between border-b border-border px-4 py-3">
+              <p id="guide-drawer-title" className="font-display text-lg font-medium tracking-tight">
+                Toelichting
+              </p>
+              <Button type="button" variant="ghost" size="icon-sm" onClick={() => setGuideOpen(false)}>
+                <X className="size-4" />
+                <span className="sr-only">Sluiten</span>
+              </Button>
+            </div>
+            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
+              <GuidePanel idPrefix="gids-m" />
+            </div>
+          </aside>
+        </div>
+      ) : null}
 
       <AlertDialog open={resetOpen} onOpenChange={setResetOpen}>
         <AlertDialogContent>
