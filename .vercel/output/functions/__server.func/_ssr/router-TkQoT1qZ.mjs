@@ -1,11 +1,10 @@
 import { i as __toESM, n as __exportAll } from "../_runtime.mjs";
-import { i as require_react } from "../_libs/dnd-kit__accessibility+react.mjs";
+import { d as require_jsx_runtime, f as require_react } from "../_libs/@radix-ui/react-alert-dialog+[...].mjs";
 import { _ as useRouter, f as createRouter, g as createRootRoute, h as createFileRoute, l as Scripts, m as lazyRouteComponent, p as Outlet, u as HeadContent } from "../_libs/@tanstack/react-router+[...].mjs";
-import { v as require_jsx_runtime } from "../_libs/@radix-ui/react-alert-dialog+[...].mjs";
 import { n as TriangleAlert } from "../_libs/lucide-react.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-y4jfdy6v.js
-var router_y4jfdy6v_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-TkQoT1qZ.js
+var router_TkQoT1qZ_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var FALLBACK_MESSAGE = "An unexpected error occurred. Try reloading the page.";
@@ -299,8 +298,8 @@ function PreviewHostBridge() {
 	}, [router]);
 	return null;
 }
-var styles_default = "/assets/styles-DLOS4eIQ.css";
-var APP_NAME = "Stroom";
+var styles_default = "/assets/styles-CdewXgg-.css";
+var APP_NAME = "Rekenmethode 0.1";
 var Route$1 = createRootRoute({
 	head: () => ({
 		meta: [
@@ -312,11 +311,11 @@ var Route$1 = createRootRoute({
 			{ title: APP_NAME },
 			{
 				name: "description",
-				content: "Een kalm kanbanbord voor taken, kalender en notities. Blijft op dit apparaat staan."
+				content: "Interactieve rekenmethode voor adequate woningvoorraad, toereikend basisinkomen en gezamenlijke bestaansbasis."
 			},
 			{
 				name: "theme-color",
-				content: "#2c4a3e"
+				content: "#1b365d"
 			}
 		],
 		links: [
@@ -336,7 +335,7 @@ var Route$1 = createRootRoute({
 			},
 			{
 				rel: "stylesheet",
-				href: "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+				href: "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap"
 			},
 			{
 				rel: "stylesheet",
@@ -363,7 +362,7 @@ var Route$1 = createRootRoute({
 		] })]
 	})
 });
-var $$splitComponentImporter = () => import("./routes-DBL--XTn.mjs");
+var $$splitComponentImporter = () => import("./routes-CDCO4MOn.mjs");
 var rootRouteChildren = { IndexRoute: createFileRoute("/")({ component: lazyRouteComponent($$splitComponentImporter, "component") }).update({
 	id: "/",
 	path: "/",
@@ -377,4 +376,4 @@ function getRouter() {
 	});
 }
 //#endregion
-export { getRouter, router_y4jfdy6v_exports as t };
+export { getRouter, router_TkQoT1qZ_exports as t };

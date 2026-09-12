@@ -1,12 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Board } from "@/components/board/board";
+import { Calculator } from "@/components/model/calculator";
 
 export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
-  return (
-    <main>
-      <Board />
-    </main>
-  );
+  return <Calculator />;
 }

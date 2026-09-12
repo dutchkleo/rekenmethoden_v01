@@ -1,5 +1,5 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { i as require_react } from "./dnd-kit__accessibility+react.mjs";
+import { f as require_react } from "./@radix-ui/react-alert-dialog+[...].mjs";
 //#region node_modules/lucide-react/dist/esm/shared/src/utils.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 /**
@@ -82,159 +82,31 @@ var createLucideIcon = (iconName, iconNode) => {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var CalendarDays = createLucideIcon("calendar-days", [
-	["path", {
-		d: "M8 2v4",
-		key: "1cmpym"
-	}],
-	["path", {
-		d: "M16 2v4",
-		key: "4m81vk"
-	}],
-	["rect", {
-		width: "18",
-		height: "18",
-		x: "3",
-		y: "4",
-		rx: "2",
-		key: "1hopcy"
-	}],
-	["path", {
-		d: "M3 10h18",
-		key: "8toen8"
-	}],
-	["path", {
-		d: "M8 14h.01",
-		key: "6423bh"
-	}],
-	["path", {
-		d: "M12 14h.01",
-		key: "1etili"
-	}],
-	["path", {
-		d: "M16 14h.01",
-		key: "1gbofw"
-	}],
-	["path", {
-		d: "M8 18h.01",
-		key: "lrp35t"
-	}],
-	["path", {
-		d: "M12 18h.01",
-		key: "mhygvu"
-	}],
-	["path", {
-		d: "M16 18h.01",
-		key: "kzsmim"
-	}]
-]);
+var Check = createLucideIcon("check", [["path", {
+	d: "M20 6 9 17l-5-5",
+	key: "1gmf2c"
+}]]);
 /**
 * @license lucide-react v0.510.0 - ISC
 *
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var GripVertical = createLucideIcon("grip-vertical", [
-	["circle", {
-		cx: "9",
-		cy: "12",
-		r: "1",
-		key: "1vctgf"
-	}],
-	["circle", {
-		cx: "9",
-		cy: "5",
-		r: "1",
-		key: "hp0tcf"
-	}],
-	["circle", {
-		cx: "9",
-		cy: "19",
-		r: "1",
-		key: "fkjjf6"
-	}],
-	["circle", {
-		cx: "15",
-		cy: "12",
-		r: "1",
-		key: "1tmaij"
-	}],
-	["circle", {
-		cx: "15",
-		cy: "5",
-		r: "1",
-		key: "19l28e"
-	}],
-	["circle", {
-		cx: "15",
-		cy: "19",
-		r: "1",
-		key: "f4zoj3"
-	}]
-]);
-/**
-* @license lucide-react v0.510.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var HardDrive = createLucideIcon("hard-drive", [
-	["line", {
-		x1: "22",
-		x2: "2",
-		y1: "12",
-		y2: "12",
-		key: "1y58io"
-	}],
+var Download = createLucideIcon("download", [
 	["path", {
-		d: "M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z",
-		key: "oot6mr"
+		d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4",
+		key: "ih7n3h"
+	}],
+	["polyline", {
+		points: "7 10 12 15 17 10",
+		key: "2ggqvy"
 	}],
 	["line", {
-		x1: "6",
-		x2: "6.01",
-		y1: "16",
-		y2: "16",
-		key: "sgf278"
-	}],
-	["line", {
-		x1: "10",
-		x2: "10.01",
-		y1: "16",
-		y2: "16",
-		key: "1l4acy"
-	}]
-]);
-/**
-* @license lucide-react v0.510.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var ListTodo = createLucideIcon("list-todo", [
-	["rect", {
-		x: "3",
-		y: "5",
-		width: "6",
-		height: "6",
-		rx: "1",
-		key: "1defrl"
-	}],
-	["path", {
-		d: "m3 17 2 2 4-4",
-		key: "1jhpwq"
-	}],
-	["path", {
-		d: "M13 6h8",
-		key: "15sg57"
-	}],
-	["path", {
-		d: "M13 12h8",
-		key: "h98zly"
-	}],
-	["path", {
-		d: "M13 18h8",
-		key: "oe0vm4"
+		x1: "12",
+		x2: "12",
+		y1: "15",
+		y2: "3",
+		key: "1vk2je"
 	}]
 ]);
 /**
@@ -262,19 +134,6 @@ var RotateCcw = createLucideIcon("rotate-ccw", [["path", {
 }], ["path", {
 	d: "M3 3v5h5",
 	key: "1xhq8a"
-}]]);
-/**
-* @license lucide-react v0.510.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var StickyNote = createLucideIcon("sticky-note", [["path", {
-	d: "M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8Z",
-	key: "qazsjp"
-}], ["path", {
-	d: "M15 3v4a2 2 0 0 0 2 2h4",
-	key: "40519r"
 }]]);
 /**
 * @license lucide-react v0.510.0 - ISC
@@ -344,4 +203,4 @@ var X = createLucideIcon("x", [["path", {
 	key: "d8bk6v"
 }]]);
 //#endregion
-export { RotateCcw as a, HardDrive as c, StickyNote as i, GripVertical as l, TriangleAlert as n, Plus as o, Trash2 as r, ListTodo as s, X as t, CalendarDays as u };
+export { Plus as a, RotateCcw as i, TriangleAlert as n, Download as o, Trash2 as r, Check as s, X as t };

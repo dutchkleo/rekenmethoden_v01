@@ -1,5 +1,5 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { i as require_react } from "./dnd-kit__accessibility+react.mjs";
+import { f as require_react } from "./@radix-ui/react-alert-dialog+[...].mjs";
 //#region node_modules/zustand/esm/vanilla.mjs
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 var createStoreImpl = (createState) => {

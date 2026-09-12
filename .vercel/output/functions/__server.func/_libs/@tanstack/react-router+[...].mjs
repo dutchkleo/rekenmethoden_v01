@@ -1,8 +1,6 @@
 import { i as __toESM, r as __require, t as __commonJSMin } from "../../_runtime.mjs";
-import { i as require_react } from "../dnd-kit__accessibility+react.mjs";
+import { d as require_jsx_runtime, f as require_react, l as require_react_dom } from "../@radix-ui/react-alert-dialog+[...].mjs";
 import { r as parseHref } from "../tanstack__history.mjs";
-import { v as require_jsx_runtime } from "../@radix-ui/react-alert-dialog+[...].mjs";
-import { w as require_react_dom } from "../@dnd-kit/core+[...].mjs";
 import { PassThrough, Readable } from "node:stream";
 import { ReadableStream as ReadableStream$1 } from "node:stream/web";
 //#region node_modules/@tanstack/router-core/dist/esm/not-found.js

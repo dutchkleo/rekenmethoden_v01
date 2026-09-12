@@ -2,18 +2,21 @@
 @import "tw-animate-css";
 
 @theme {
-  --color-bg: #f3efe6;
-  --color-surface: #faf7f1;
-  --color-card: #fffcf7;
-  --color-fg: #1a1714;
-  --color-muted: #6b645c;
-  --color-subtle: #8a8278;
-  --color-primary: #2c4a3e;
-  --color-primary-fg: #f6f3ee;
-  --color-border: #e4ddd2;
+  --color-bg: #f6f4ef;
+  --color-surface: #fffcf8;
+  --color-card: #fffcf8;
+  --color-fg: #162033;
+  --color-muted: #5c6573;
+  --color-subtle: #7a8493;
+  --color-primary: #1b365d;
+  --color-primary-fg: #f6f4ef;
+  --color-border: #e2ddd3;
+  --color-input: #ede4c8;
+  --color-calc: #e8eef4;
+  --color-ok: #2f5d4a;
   --color-danger: #8f3d32;
   --color-danger-fg: #fff8f6;
-  --color-overlay: rgb(26 23 20 / 0.42);
+  --color-overlay: rgb(22 32 51 / 0.42);
 
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
@@ -26,17 +29,15 @@
   --radius-2xl: 28px;
 
   --shadow-card:
-    0px 0px 0px 1px rgb(26 23 20 / 0.06),
-    0px 1px 2px -1px rgb(26 23 20 / 0.06),
-    0px 2px 4px 0px rgb(26 23 20 / 0.04);
+    0px 0px 0px 1px rgb(22 32 51 / 0.06),
+    0px 1px 2px -1px rgb(22 32 51 / 0.06),
+    0px 2px 4px 0px rgb(22 32 51 / 0.04);
   --shadow-card-hover:
-    0px 0px 0px 1px rgb(26 23 20 / 0.08),
-    0px 4px 10px -2px rgb(26 23 20 / 0.1),
-    0px 8px 18px -6px rgb(26 23 20 / 0.08);
+    0px 0px 0px 1px rgb(22 32 51 / 0.08),
+    0px 4px 10px -2px rgb(22 32 51 / 0.1);
   --shadow-lift:
-    0px 0px 0px 1px rgb(26 23 20 / 0.08),
-    0px 12px 28px -8px rgb(26 23 20 / 0.22),
-    0px 4px 10px -2px rgb(26 23 20 / 0.12);
+    0px 0px 0px 1px rgb(22 32 51 / 0.08),
+    0px 12px 28px -8px rgb(22 32 51 / 0.2);
 
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -46,6 +47,7 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
 
   html,
@@ -56,7 +58,6 @@
 
   body {
     background-color: var(--color-bg);
-    background-image: linear-gradient(180deg, #f7f3ea 0%, #efe8db 100%);
     color: var(--color-fg);
     font-family: var(--font-sans);
   }
@@ -75,6 +76,10 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+
+  sub {
+    font-size: 0.7em;
+  }
 }
 
 @layer utilities {
@@ -86,10 +91,5 @@
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  .kanban-card,
-  .kanban-column {
-    transition: none !important;
   }
 }

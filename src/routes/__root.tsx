@@ -3,7 +3,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Stroom";
+const APP_NAME = "Rekenmethode 0.1";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -13,9 +13,10 @@ export const Route = createRootRoute({
       { title: APP_NAME },
       {
         name: "description",
-        content: "Een kalm kanbanbord voor taken, kalender en notities. Blijft op dit apparaat staan.",
+        content:
+          "Interactieve rekenmethode voor adequate woningvoorraad, toereikend basisinkomen en gezamenlijke bestaansbasis.",
       },
-      { name: "theme-color", content: "#2c4a3e" },
+      { name: "theme-color", content: "#1b365d" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
@@ -27,7 +28,7 @@ export const Route = createRootRoute({
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap",
       },
       { rel: "stylesheet", href: appCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
